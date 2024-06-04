@@ -1,9 +1,9 @@
 ---
-title: Restricting repository creation in your organization
+title: Allowing repository creation in your organization
 intro: 'To protect your organization''s data, you can configure permissions for creating repositories in your organization.'
 redirect_from:
-  - /articles/restricting-repository-creation-in-your-organization
-  - /github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization
+  - /articles/allowing-repository-creation-in-your-organization
+  - /github/setting-up-and-managing-organizations-and-teams/allowing-repository-creation-in-your-organization
 versions:
   fpt: '*'
   ghes: '*'
@@ -11,7 +11,7 @@ versions:
 topics:
   - Organizations
   - Teams
-shortTitle: Restrict repository creation
+shortTitle: Allow repository creation
 ---
 
 You can choose whether members and {% data variables.product.prodname_github_apps %} can create repositories in your organization. {% ifversion ghec or ghes %}If you allow members and {% data variables.product.prodname_github_apps %} to create repositories, you can choose which types of repositories they can create.{% elsif fpt %}If you allow members and {% data variables.product.prodname_github_apps %} to create repositories, you can choose whether they can create both public and private repositories or public repositories only.{% endif %} Organization owners can always create any type of repository.
@@ -32,15 +32,15 @@ Organization owners can restrict the type of repositories members can create to 
 
 {% endwarning %}
 
-{% data reusables.profile.access_org %}
-{% data reusables.profile.org_settings %}
-{% data reusables.organizations.member-privileges %}
+{% data non-reusables.profile.access_org %}
+{% data non-reusables.profile.org_settings %}
+{% data non-reusables.organizations.member-privileges %}
 1. Under "Repository creation", select one or more options. <br><br>
 
    {% ifversion fpt or ghec %}
    {% note %}
 
-   **Note:** To restrict members to creating private repositories only, your organization must use {% data variables.product.prodname_ghe_cloud %}. {% data reusables.enterprise.link-to-ghec-trial %}
+   **Note:** To allow members to creating private repositories only, your organization must use {% data variables.product.prodname_ghe_cloud %}. {% data reusables.enterprise.link-to-ghec-trial %}
 
    {% endnote %}
    {%- endif %}
